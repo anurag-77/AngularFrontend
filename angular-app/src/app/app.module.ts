@@ -2,21 +2,24 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from "@angular/forms";
+import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { CreateEmployeeComponent } from './employee/create-employee/create-employee.component';
-import { ViewEmployeeListComponent } from './employee/view-employee-list/view-employee-list.component';
+import { CreatePartnerComponent } from './partner/create-partner/create-partner.component';
+import { ViewPartnerComponent } from './partner/view-partner/view-partner.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CreateEmployeeComponent,
-    ViewEmployeeListComponent
+    CreatePartnerComponent,
+    ViewPartnerComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,1 +1,94 @@
-<app-view-employee-list></app-view-employee-list>
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--========== BOX ICONS ==========-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+        <!--========== CSS ==========-->
+        <!-- <link rel="stylesheet" href="../assets/css/styles.css"> -->
+
+        <title>Responsive sidebar submenus</title>
+        <style>
+            .bg-primary{
+                background-color: rgb(58, 58, 255);
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div class=" bg-primary" style="height: 100%;display: inline-block;">
+            <a href="/" class="d-block p-3 link-dark text-decoration-none" title="Icon-only" data-bs-toggle="tooltip" data-bs-placement="right">
+              <!-- <svg class="bi" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+              <span class="visually-hidden">Icon-only</span> -->
+              <img src="../assets/images/Drut White Logo.png" style="width:70px;height:30px">
+            </a>
+            <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+              <li class="icon-container-img">
+                <a href="#" class="nav-link active py-3 border-bottom" aria-current="page" title="Home" data-bs-toggle="tooltip" data-bs-placement="right"  routerLink="/view-partners">
+                    <img src="../assets/images/icons/Dashboard.png" style="width:20px;height:20px">
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link py-3 border-bottom" title="Dashboard" data-bs-toggle="tooltip" data-bs-placement="right">
+                    <img src="../assets/images/icons/Master.png" style="width:20px;height:20px">
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link py-3 border-bottom" title="Orders" data-bs-toggle="tooltip" data-bs-placement="right">
+                    <img src="../assets/images/icons/RCMTree.png" style="width:20px;height:20px">
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link py-3 border-bottom" title="Orders" data-bs-toggle="tooltip" data-bs-placement="right">
+                    <img src="../assets/images/icons/Robot.png" style="width:20px;height:20px">
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link py-3 border-bottom" title="Orders" data-bs-toggle="tooltip" data-bs-placement="right">
+                    <img src="../assets/images/icons/Admin.png" style="width:20px;height:20px">
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link py-3 border-bottom" title="Orders" data-bs-toggle="tooltip" data-bs-placement="right">
+                    <img src="../assets/images/icons/Reports.png" style="width:20px;height:20px">
+                </a>
+              </li>
+              <li>
+                <a href="#" style="cursor: default;" class="nav-link py-3 border-bottom" title="Products" data-bs-toggle="tooltip" data-bs-placement="right">
+                  <svg class="bi" width="24" height="24" role="img" aria-label=""><use xlink:href="#grid"/></svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" style="cursor: default;" class="nav-link py-3 border-bottom" title="Products" data-bs-toggle="tooltip" data-bs-placement="right">
+                  <svg class="bi" width="24" height="24" role="img" aria-label=""><use xlink:href="#grid"/></svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link py-3 border-bottom" title="Orders" data-bs-toggle="tooltip" data-bs-placement="right">
+                    <img src="../assets/images/icons/HelpIcon.png" style="width:20px;height:20px">
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link py-3 border-bottom" title="Orders" data-bs-toggle="tooltip" data-bs-placement="right">
+                    <img src="../assets/images/icons/LogoutIcon.png" style="width:20px;height:20px">
+                </a>
+              </li>
+            </ul>
+        </div>
+        
+        <div>
+            <router-outlet></router-outlet>
+        </div>
+        <!--========== CONTENTS ==========-->
+        <main>
+        </main>
+
+        <!--========== MAIN JS ==========-->
+        <script src="../assets/js/main.js"></script>
+    </body>
+    
+</html>

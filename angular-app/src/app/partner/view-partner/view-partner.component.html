@@ -1,0 +1,55 @@
+<div class="row justify-content-creator" style="display: inline-block;">
+    <div class="mt-sm-3 col-md-12 border">
+      <div class="spacer-xs"></div>
+      <br>
+      <div class="col-md-12 row">
+        <div class="col-10">
+          <h2>Partners List</h2>
+        </div>
+        <div class="col-2">
+          <div class="col-12 float-start" style="float: right;">
+            <a routerLink="/create-partner" routerLinkActive="active" class="btn btn-outline-primary">Create Partner</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12 form-row">
+        <table border="1" class="col-md-12 table">
+          <thead>
+            <tr>
+              <!-- <td *ngFor = "let header of lstheaderList">{{ header }}</td> -->
+              <td>No.</td>
+              <td>Partner Name</td>
+              <td>Country</td>
+              <td>Address</td>
+              <td>Phone Number</td>
+              <td>Website</td>
+              <td>Created On</td>
+              <td *ngIf = "partners.length > 0">Edit</td>
+              <td *ngIf = "partners.length > 0">Delete</td>
+            </tr>
+          </thead>
+          <tbody *ngFor="let partner of partners;index as i;">
+            <tr>
+              <!-- <td *ngFor = "let header of lstheaderList">{{ employee[header] }}</td> -->
+              <td>{{ i+1 }}</td>
+              <td>{{ partner.partnerName }}</td>
+              <td>{{ partner.country }}</td>
+              <td>{{ partner.address }}</td>
+              <td>{{ partner.phoneno }}</td>
+              <td>{{ partner.website }}</td>
+              <td>{{ partner.createdDate }}</td>
+              <td><a [routerLink]="['/update-partner',partner.UniqueID]"><i class="far fa-edit fa-lg"></i></a></td>
+              <td><a routerLink="/view-partners" routerLinkActive="active" (click)="deletePartner(partner)"><i class="far fa-trash-alt fa-lg"></i></a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  
+      <br>
+    </div>
+  </div>
+
+  <router-outlet></router-outlet>
+  
+  
+  
